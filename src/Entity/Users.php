@@ -48,6 +48,8 @@ class Users implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(length: 150)]
     private ?string $city = null;
 
+    #[ORM\Column(type:'boolean')]
+    private bool $isVerified = false;
 
     #[ORM\OneToMany(mappedBy: 'users', targetEntity: Orders::class)]
     private Collection $orders;
@@ -184,6 +186,18 @@ class Users implements UserInterface, PasswordAuthenticatedUserInterface
     public function setCity(string $city): static
     {
         $this->city = $city;
+
+        return $this;
+    }
+
+    public function getIsVerified(): bool
+    {
+        return $this->isVerified;
+    }
+
+    public function setIsVerified(bool $isVerified): static
+    {
+        $this->isVerified = $isVerified;
 
         return $this;
     }

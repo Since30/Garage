@@ -2,15 +2,17 @@
 
 namespace App\DataFixtures;
 
+
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 use App\Entity\Categories;
 use Symfony\Component\String\Slugger\SluggerInterface;
 
 
+
 class CategoriesFixtures extends Fixture
 {
-    private $counter = 1;
+    private int $counter = 1;
     public function __construct(private SluggerInterface $slugger){}
 
     public function load(ObjectManager $manager): void

@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} liste des modèles de la categorie {{ category.name }}{% endblock %}
+
+{% block body %}
+
+
+
+    <main class="container">
+        <section class="row">
+            <div class="col-12">
+                <h1>liste des modèles de la categorie {{ category.name }}</h1>
+            </div>
+            {% for product in category.products %}
+                <div class="col-3 ">
+                    <article class="card h-100">
+                        <div class="card-body">
+                            <h2 class="card-title">{{ product.name }}</h2>
+                            <p class="card-text">{{ product.description }}</p>
+                            <a class="btn btn-primary" href="#">voir le produit</a>
+                        </div>
+                    </article>
+                </div>
+            {% endfor %}
+
+        </section>
+    </main>
+{% endblock %}
