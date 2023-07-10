@@ -23,6 +23,9 @@
         <div class="alert alert-warning alert-dismissible" role="alert">
             <strong>Attention !</strong> Votre compte n'est pas encore vérifié, vous ne pouvez pas encore accéder à toutes les fonctionnalités du site.
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            <div class="alert-message">
+                <a href="{{ path('resend_verif') }}">Renvoyer le lien d'activation</a>
+            </div>
         </div>
     {% endif %}
     {% include "_partials/_flash.html.twig" %}
