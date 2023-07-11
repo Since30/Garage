@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\CouponsRepository;
 use App\Entity\Trait\CreatedAtTrait;
+use App\Entity\Orders;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
@@ -12,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 #[ORM\Entity(repositoryClass: CouponsRepository::class)]
 class Coupons
 {
-    use Trait\CreatedAtTrait;
+    use CreatedAtTrait;
 
     #[ORM\Id]
     #[ORM\GeneratedValue]

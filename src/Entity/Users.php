@@ -10,13 +10,14 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 use App\Entity\Trait\CreatedAtTrait;
+use App\Entity\Orders;
 
 
 #[ORM\Entity(repositoryClass: UsersRepository::class)]
 #[UniqueEntity(fields: ['email'], message: 'un compte existe déjà avec cet email')]
 class Users implements UserInterface, PasswordAuthenticatedUserInterface
 {
-    use Trait\CreatedAtTrait;
+    use CreatedAtTrait;
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]

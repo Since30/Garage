@@ -13,8 +13,8 @@ use App\Entity\Trait\SlugTrait;
 #[ORM\Entity(repositoryClass: ProductsRepository::class)]
 class Products
 {
-    use Trait\CreatedAtTrait;
-    use Trait\SlugTrait;
+    use CreatedAtTrait;
+    use SlugTrait;
 
     #[ORM\Id]
     #[ORM\GeneratedValue]

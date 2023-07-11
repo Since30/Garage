@@ -11,7 +11,7 @@ use App\Entity\Trait\CreatedAtTrait;
 #[ORM\Entity(repositoryClass: OrdersRepository::class)]
 class Orders
 {
-    use Trait\CreatedAtTrait;
+    use CreatedAtTrait;
 
     #[ORM\Id]
     #[ORM\GeneratedValue]
