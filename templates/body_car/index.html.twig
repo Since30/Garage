@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Carrosserie
+{% endblock %}
+
+{% block body %}
+	<main class="Container-fluid">
+		<div class="row">
+			<div class="col-12">
+				<h1>forfait carrosserie</h1>
+			</div>
+
+			<div class="col">
+				<table>
+					<thead>
+						<tr>
+							<th>Type de répation</th>
+							<th>Prix</th>
+							<th>Temps</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Peinture</td>
+							<td>1000€</td>
+							<td>1 semaine</td>
+						</tr>
+						<tr>
+							<td>Carrosserie</td>
+							<td>500€</td>
+							<td>1 semaine</td>
+						</tr>
+						<tr>
+							<td>Carrosserie + peinture</td>
+							<td>1500€</td>
+							<td>2 semaines</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	{% endblock %}

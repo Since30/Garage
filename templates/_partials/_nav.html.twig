@@ -1,56 +1,60 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark" >
-    <div class="container-fluid">
-        <a class="navbar-brand" href="{{ path('app_main') }}"><img class="rounded-2 shadow" src="{{ asset('assets/pictures/LogoNav.png')}}" alt="logo"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/">Acceuil</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Réparation & entretien</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Carosserie</a>
-                </li>
+<nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="{{ path('app_main') }}"><img class="rounded-2 shadow" src="{{ asset('assets/pictures/LogoNav.png')}}" alt="logo"></a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="/">Acceuil</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href={{path('app_repair')}}>Réparation & entretien</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href={{path('app_body_car')}}>Carosserie</a>
+				</li>
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Achat/Vente Véhicule
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Achat</a></li>
-                        <li><a class="dropdown-item" href="#">Vente</a></li>
-
-
-                    </ul>
-                </li>
-
-            </ul>
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                {% if app.user %}
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Mon compte</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="{{ path('app_logout') }}">Me deconnecter</a>
-                    </li>
-                    {% else %}
-                        <li class="nav-item">
-                            <a class="nav-link active" href="{{ path('app_login') }}">Me connecter</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="{{ path('app_register') }}">M'inscrire</a>
-                        </li>
-
-                {% endif %}
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						Achat/Vente Véhicule
+					</a>
+					<ul class="dropdown-menu">
+						<li>
+							<a class="dropdown-item" href={{path('app_buy_car')}}>Achat</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href={{path('app_sale')}}>Vente</a>
+						</li>
 
 
-            </ul>
+					</ul>
+				</li>
+
+			</ul>
+			<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+				{% if app.user %}
+					<li class="nav-item">
+						<a class="nav-link active" href="#">Mon compte</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" href="{{ path('app_logout') }}">Me deconnecter</a>
+					</li>
+				{% else %}
+					<li class="nav-item">
+						<a class="nav-link active" href="{{ path('app_login') }}">Me connecter</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" href="{{ path('app_register') }}">M'inscrire</a>
+					</li>
+
+				{% endif %}
 
 
-        </div>
-    </div>
+			</ul>
+
+
+		</div>
+	</div>
 </nav>

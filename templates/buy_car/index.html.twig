@@ -1,0 +1,111 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Achat d'un véhicule!
+{% endblock %}
+
+{% block body %}
+	<main class="container-fluid">
+		<div class="row">
+			<div class="col-12">
+				<h1>Notre selection</h1>
+			</div>
+			<nav class="navbar navbar-expand-lg --bs-body-color">
+				<div class="container-fluid">
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNav">
+						<ul class="navbar-nav align-items-stretch text-center flex-column justify-content-center mx-2">
+							<li class="nav-item col-md-12 col-1">
+								<select class="form-select form-select-lg" aria-label=".form-select-lg" name="Brand" id="brand-select">
+									<option value="">--Marque--</option>
+									<option value="">Renault</option>
+									<option value="">Peugeot</option>
+									<option value="">Citroen</option>
+									<option value="">Fiat</option>
+									<option value="">Seat</option>
+									<option value="">Volkswagen</option>
+									<option value="">Audi</option>
+									<option value="">BMW</option>
+									<option value="">Mercedes</option>
+									<option value="">Ford</option>
+									<option value="">Opel</option>
+									<option value="">Toyota</option>
+									<option value="">Nissan</option>
+									<option value="">Mazda</option>
+									<option value="">Honda</option>
+									<option value="">Hyundai</option>
+									<option value="">Kia</option>
+									<option value="">Mitsubishi</option>
+									<option value="">Suzuki</option>
+									<option value="">Dacia</option>
+									<option value="">Jeep</option>
+									<option value="">Land Rover</option>
+									<option value="">Lexus</option>
+									<option value="">Mini</option>
+								</select>
+							</li>
+							<li class="nav-item col-md-12 col-1">
+								<select class="form-select form-select-lg " aria-label=".form-select-lg ">
+									<option selected>Type</option>
+									<option value="1">Gasoil</option>
+									<option value="2">Essence</option>
+									<option value="3">Electrique</option>
+									<option value="4">Hybride</option>
+								</select>
+							</li>
+							<li class="nav-item  col-md-12 col-1">
+								<select class="form-select form-select-lg " aria-label=".form-select-lg">
+									<option selected>Boite de vitesse</option>
+									<option value="1">Manuelle</option>
+									<option value="2">Automatique</option>
+								</select>
+							</li>
+							<li class="nav-item  col-md-12 col-1">
+								<select class="form-select form-select-lg " aria-label=".form-select-lg">
+									<option selected>Nombre de portes</option>
+									<option value="1">2</option>
+									<option value="2">3</option>
+									<option value="3">4</option>
+									<option value="4">5</option>
+								</select>
+							</li>
+							<li class="nav-item col-md-12 col-1">
+								<select class="form-select form-select-lg " aria-label=".form-select-lg example">
+									<option selected>Nombre de places</option>
+									<option value="1">2</option>
+									<option value="2">3</option>
+									<option value="3">4</option>
+									<option value="4">5</option>
+								</select>
+							</li>
+							<li class="nav-item  col-md-12 col-2">
+								<form class="form-control">
+									<label for="km">KM</label>
+									<input class="form-control" type="number" id="km" name="km" min="0" max="1000000">
+								</form>
+
+							</li>
+							<li class="nav-item  col-md-12 col-2">
+								<form class="form-control">
+									<label for="price">Prix</label>
+									<input class="form-control" type="number" id="price" name="price" min="0" max="1000000">
+								</form>
+
+							</li>
+							<li class="nav-item  col-md-12 col-2">
+								<form class="form-control">
+									<label for="year">Année</label>
+									<input class="form-control" type="number" id="year" name="year" min="0" max="2021">
+								</form>
+							</li>
+
+							<button class="btn btn-primary shadow-lg" type="submit">Rechercher</button>
+						</ul>
+					</div>
+				</div>
+			</nav>
+
+
+		</main>
+	{% endblock %}
